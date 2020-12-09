@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Converter | Converter</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Main Navigation -->
+    <header class="main-header">
+      <div class="container">
+        <div class="main-header__logo">
+          <!-- Choose which you prefer -->
+          <img
+            src="https://unsplash.it/200"
+            alt="Converter"
+            style="display: none"
+          />
+          <h1>Logo</h1>
+        </div>
+        <div class="main-header__title">
+          <h2>Name of Whatever</h2>
+        </div>
+        <nav class="main-header__nav">
+          <ul>
+            <li><a class="btn current" href="index.html">Upload</a></li>
+            <li><a class="btn" href="player.html">Stream</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="converter">
+      <div class="container">
+        <div class="converter__wrapper">
+          <!-- Source Panel -->
+          <section class="converter__source__panel folder-specs">
+            <h4 class="title">Source</h4>
+            <div class="path">
+              <input type="text" placeholder="Source for raw video" />
+            </div>
+            <div class="format">
+              <div>
+                <label for="mp3">MP3</label>
+                <span class="radio-control">
+                  <input
+                    type="radio"
+                    name="source-fomat"
+                    value="mp3"
+                    id="mp3"
+                    checked
+                  />
+                  <span class="check"></span>
+                </span>
+              </div>
+              <div>
+                <label for="mp4">MP4</label>
+                <span class="radio-control">
+                  <input
+                    type="radio"
+                    name="source-fomat"
+                    value="mp4"
+                    id="mp4"
+                  />
+                  <span class="check"></span>
+                </span>
+              </div>
+              <div>
+                <label for="avi">AVI</label>
+                <span class="radio-control">
+                  <input
+                    type="radio"
+                    name="source-fomat"
+                    value="avi"
+                    id="avi"
+                  />
+                  <span class="check"></span>
+                </span>
+              </div>
+              <div>
+                <label for="dat">DAT</label>
+                <span class="radio-control">
+                  <input
+                    class="radio-control"
+                    type="radio"
+                    name="source-fomat"
+                    value="dat"
+                    id="dat"
+                  />
+                  <span class="check"></span>
+                </span>
+              </div>
+              <div>
+                <label for="etc">ETC</label>
+                <span class="radio-control">
+                  <input
+                    class="radio-control"
+                    type="radio"
+                    name="source-fomat"
+                    value="etc"
+                    id="etc"
+                  />
+                  <span class="check"></span>
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Destination Panel -->
+          <section class="converter__destination__panel folder-specs">
+            <h4 class="title">Destination</h4>
+            <div class="path">
+              <input
+                type="text"
+                placeholder="Destination for converted video"
+              />
+            </div>
+            <div class="format">
+              <div>
+                <label for="mp3">MP3</label>
+                <span class="radio-control">
+                  <input
+                    type="radio"
+                    name="destination-fomat"
+                    value="mp3"
+                    id="mp3"
+                    checked
+                  />
+                  <span class="check"></span>
+                </span>
+              </div>
+              <div>
+                <label for="mp4">MP4</label>
+                <span class="radio-control">
+                  <input
+                    type="radio"
+                    name="destination-fomat"
+                    value="mp4"
+                    id="mp4"
+                  />
+                  <span class="check"></span>
+                </span>
+              </div>
+              <div>
+                <label for="avi">AVI</label>
+                <span class="radio-control">
+                  <input
+                    type="radio"
+                    name="destination-fomat"
+                    value="avi"
+                    id="avi"
+                  />
+                  <span class="check"></span>
+                </span>
+              </div>
+              <div>
+                <label for="dat">DAT</label>
+                <span class="radio-control">
+                  <input
+                    class="radio-control"
+                    type="radio"
+                    name="destination-fomat"
+                    value="dat"
+                    id="dat"
+                  />
+                  <span class="check"></span>
+                </span>
+              </div>
+              <div>
+                <label for="etc">ETC</label>
+                <span class="radio-control">
+                  <input
+                    class="radio-control"
+                    type="radio"
+                    name="destination-fomat"
+                    value="etc"
+                    id="etc"
+                  />
+                  <span class="check"></span>
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Naming Format Panel -->
+          <section class="converter__naming__panel folder-specs">
+            <h4 class="title">Naming Format</h4>
+            <div class="path">
+              <input type="text" placeholder="Naming convertion" />
+            </div>
+          </section>
+
+          <!-- Controls Panel with Save, Run, Stop and Thumbnails -->
+          <section class="converter__controls__panel folder-specs">
+            <h4 class="title">Control Keys</h4>
+            <div class="controls-wrapper">
+              <button class="btn save-btn">Save</button>
+              <button class="btn run-btn">Run</button>
+              <button class="btn stop-btn">Stop</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

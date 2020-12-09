@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Converter | Stream</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Main Navigation -->
+    <header class="main-header">
+      <div class="container">
+        <div class="main-header__logo">
+          <!-- <img src="https://unsplash.it/200" alt="Converter"> -->
+          <h1>Logo</h1>
+        </div>
+        <div class="main-header__title">
+          <h2>Name of Whatever</h2>
+        </div>
+        <nav class="main-header__nav">
+          <ul>
+            <li><a class="btn" href="index.html">Upload</a></li>
+            <li><a class="btn current" href="player.html">Stream</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="player">
+      <div class="container">
+        <div class="player__wrapper">
+          <!-- Video Player Panel -->
+          <section class="player-video__panel">
+            <div class="iframe-player">
+              <iframe
+                width="980"
+                height="551"
+                src="https://www.youtube.com/embed/NkIi7h8NnS4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="details">
+              <h3>Title of the video</h3>
+              <p>
+                Video Description <br />
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
+                nostrum consequatur distinctio eum eveniet vitae praesentium
+                magni ut nisi nihil?
+              </p>
+            </div>
+          </section>
+
+          <!-- Video List Panel -->
+          <section class="player-list__panel">
+            <!-- video item -->
+            <div class="video">
+              <iframe
+                width="980"
+                height="551"
+                src="https://www.youtube.com/embed/ngc9gnGgUdA"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="video-description">
+                <h6>Full Stack</h6>
+                <p>
+                  SESSION 2B (3): RATION ANALYSIS & WRITING OF FINANCIAL
+                  ANALYSIS REPORTS
+                </p>
+              </div>
+            </div>
+            <div class="video">
+              <iframe
+                width="980"
+                height="551"
+                src="https://www.youtube.com/embed/ngc9gnGgUdA"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="video-description">
+                <h6>Full Stack</h6>
+                <p>
+                  SESSION 2B (3): RATION ANALYSIS & WRITING OF FINANCIAL
+                  ANALYSIS REPORTS
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

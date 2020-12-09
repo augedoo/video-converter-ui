@@ -1,0 +1,172 @@
+// =================================
+// Imports
+// NB: partials are imported at bottom of this file
+// ===================================
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+// ===================
+// Config
+// ===================
+// NOTE: Configure site features here
+
+$primary-color: #007acc;
+$secondary-color: #da0000;
+$page-bg: #edf2f9;
+$white: #ffffff;
+$light: #edf2f9;
+$medium: #afafaf;
+$dark: #212c3b;
+$black: #1a202c;
+$max-width: 1000px;
+// Media queries
+$largeScreen: 1000px;
+$tablet: 768px;
+$smartphone: 500px;
+
+@mixin smartphone {
+  @media screen and (min-width: #{$smartphone}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin largeScreen {
+  @media screen and (min-width: #{$largeScreen}) {
+    @content;
+  }
+}
+
+// ===================
+// Resets
+// ===================
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $light;
+  font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+ul,
+li,
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+// ===================
+// Utility classes
+// ===================
+.container {
+  margin: auto;
+  max-width: $max-width;
+  width: 90%;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  background: $dark;
+  color: $light;
+  border: none;
+  font-weight: bold;
+  outline: none;
+}
+
+// ===================
+// Main Styling
+// ===================
+.main-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem;
+  box-shadow: 0 4px 7px rgba(59, 65, 94, 0.08);
+  background: $white;
+  z-index: 1000;
+
+  .container {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between !important;
+      flex-direction: row;
+    }
+  }
+
+  &__logo {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $primary-color;
+    border-radius: 3px;
+
+    h1 {
+      color: $secondary-color;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 0.5rem 1.5rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    // grid-area: title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+  }
+
+  nav {
+    grid-column: 1 / span 2;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      margin-left: 1rem;
+    }
+
+    a.btn {
+      border-bottom: 5px solid transparent;
+
+      &.current {
+        border-bottom: 5px solid $primary-color;
+      }
+    }
+  }
+}
+
+@import './converter';
+@import './player';

@@ -1,0 +1,149 @@
+.converter {
+  &__wrapper {
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 7px rgba(59, 65, 94, 0.08);
+    background: $white;
+  }
+
+  .folder-specs {
+    margin-bottom: 2rem;
+
+    .title {
+      margin-bottom: 0.5rem;
+    }
+
+    .path {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      input {
+        flex: 1;
+        display: inline-block;
+        border: 1px solid $dark;
+        padding: 0.75rem 0.5rem;
+        margin-right: 1rem;
+        font-size: 1.1rem;
+        letter-spacing: 1.2px;
+        outline: none;
+
+        &::placeholder {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .format {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding: 1rem 0rem 0;
+
+      div {
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+
+        // Radio button
+        span.radio-control {
+          margin: 5px;
+          background: darken($color: $page-bg, $amount: 10);
+          height: 24px;
+          width: 24px;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+
+        input[type='radio'] {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          z-index: 2;
+        }
+
+        span.check {
+          width: 60%;
+          height: 60%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: inline-block;
+          opacity: 0;
+          background: $dark;
+          border-radius: 100%;
+          transition: 0.35s;
+        }
+
+        input[type='radio']:checked + span.check {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__source__panel,
+  &__destination__panel,
+  &__naming__panel {
+    padding: 2rem;
+    border: solid $dark 1px;
+  }
+
+  &__source__panel {
+    border-color: $secondary-color;
+    .path {
+      button {
+        background: $secondary-color !important;
+      }
+
+      input[type='text'] {
+        border-color: $secondary-color !important;
+      }
+    }
+
+    span.check {
+      background: $secondary-color !important;
+    }
+  }
+
+  &__destination__panel {
+    border-color: $primary-color;
+    .path {
+      button {
+        background: $primary-color !important;
+      }
+
+      input[type='text'] {
+        border-color: $primary-color !important;
+      }
+    }
+
+    span.check {
+      background: $primary-color !important;
+    }
+  }
+
+  &__controls__panel {
+    button {
+      margin-right: 0.5rem;
+    }
+
+    .save-btn {
+      background: $primary-color;
+    }
+    .run-btn {
+      background: green;
+    }
+    .stop-btn {
+      background: $secondary-color;
+    }
+  }
+}
